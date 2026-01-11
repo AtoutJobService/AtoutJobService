@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Missions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="logo">
+    <a href="missions.html">
+        <img src="images/logo ajs.png" alt="Logo AJS">
+    </a>
+</div>
+
+    <nav>
+        <a href="missions.html">Missions</a>
+        <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+        <a href="proposer-missions.html">Proposer des missions</a>
+        <a href="devenir-interimaire.html">Devenir intérimaire</a>
+        <a href="historique.html">Historique des missions</a>
+
+    </nav>
+
+
+</header>
+
+<div class="container">
+    <h2>Missions</h2>
+
+    <p>Nous proposons des missions pour les étudiants de NEOMA Business School</p>
+
+    <div class="box">
+<div class="mission-box">
+
+    <!-- COLONNE GAUCHE : CONTENU -->
+    <div class="mission-left">
+
+        <h2 class="mission-title">MISSION 1</h2>
+
+        <div class="mission-main">
+            <img src="images/Instagram_icon.png" alt="Mission">
+
+            <div class="mission-desc-block">
+                <h4>Description de la mission</h4>
+                <p class="mission-desc">
+                    LoreLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor,
+                </p>
+            </div>
+        </div>
+
+        <!-- INFOS + PIECE JOINTE -->
+        <div class="mission-bottom">
+            
+            <!-- LISTE INFOS -->
+            <div class="mission-infos">
+                <p><span class="Marge">Salaire brut : </span><strong>Non renseigné</strong></p>
+                <p><span class="Marge">Localisation : </span><strong>Reims</strong></p>
+                <p><span class="Marge">Permis A requis : </span> <strong>Non</strong></p>
+                <p><span class="Marge">Durée : </span><strong>40h/mois</strong></p>
+                <p><span class="Marge">Compétences requises : </span><strong>/</strong></p>
+            </div>
+
+
+            <!-- PIECE JOINTE PDF -->
+            <div class="mission-pdf">
+                <p><strong>Fiche mission (PDF)</strong></p>
+                <a href="PDF Missions/Offre agent polyvalent d'accueil_Campus_Reims_Auto-entrepreneur.pdf" target="_blank" class="pdf-link">
+                    📄 Télécharger l’offre
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- COLONNE DROITE : POSTULER -->
+<input type="checkbox" id="apply-toggle" hidden>
+
+<div class="mission-right">
+    <label for="apply-toggle" class="apply-btn">Postuler</label>
+</div>
+
+<div class="overlay">
+    <div class="popup">
+        <label for="apply-toggle" class="close">✕</label>
+
+        <p>
+            Si vous envoyez ce formulaire, vous assurez être disponible aux horaires indiqués.
+            Vous acceptez le traitement de vos données par AJS et d'être recontacté.
+        </p>
+
+<form action="mailto:atoutjobservice.contact@neoma-bs.com" method="post" enctype="text/plain">
+
+    <input type="text" name="nom" placeholder="Nom" required>
+    <input type="text" name="prenom" placeholder="Prénom" required>
+    <input type="tel" name="telephone" placeholder="Téléphone">
+    <input type="email" name="email" placeholder="Adresse e-mail" required>
+
+    <textarea name="commentaires" placeholder="Commentaires"></textarea>
+
+    <div class="permis-block">
+        <span class="permis-label">Permis :</span>
+
+        <label class="permis-option">
+            <input type="radio" name="permis" value="Oui">
+            Oui
+        </label>
+
+        <label class="permis-option">
+            <input type="radio" name="permis" value="Non">
+            Non
+        </label>
+    </div>
+
+    <button type="submit">Envoyer</button>
+</form>
+
+    </div>
+</div>
+
+
+</div>
+
+
+    </div>
+</div>
+
+
+
+
+
+<footer>
+    <div class="footer-content">
+        <a href="https://neoma-bs.fr/" target="_blank">
+            <img src="images/NEOMA_LOGOTYPE_RVB.jpg" alt="Logo Neoma" class="social-logo">
+        </a>
+        <a href="https://www.instagram.com/atoutjobservice/" target="_blank">
+            <img src="images/Instagram_icon.png" alt="Instagram AJS" class="social-logo">
+        </a>
+
+        <a href="https://www.linkedin.com/" target="_blank">
+            <img src="images/LinkedIn_logo_initiales.png" alt="LinkedIn AJS" class="social-logo">
+        </a>
+        <a href=""></a>
+        <p>© 2026 AJS Neoma • Contacts • Plan du site • 
+            <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
+            • Dernière Mise à Jour : 10/01/2025
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
