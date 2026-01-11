@@ -359,8 +359,11 @@ footer {
 }
 
 .mission-main img {
-    width: 100px;
+    width: 25%;
+    max-width: 15%;
+    height: 100%;
     border-radius: 12px;
+    object-fit: cover;
 }
 
 .toggle-desc {
