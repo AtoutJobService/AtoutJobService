@@ -533,17 +533,19 @@ footer {
     background: #800000;
 }
 
-
-
-body {
-    background: 
+/* ===== Page du fond "Devenir Intérimaire" ===== */
+.interimaire-page {
+    background:
         linear-gradient(
-            rgba(255, 255, 255, 0.853),
-            rgba(243, 96, 96, 0.088)
+            rgba(255,255,255,0.85),
+            rgba(255,255,255,0.85)
         ),
-        url("images/Qui-Sommes-Nous/TEST.jpg");
+        url("images/Image\ Illustration\ Reims.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
+/* ===== Défilement avec la page ou non ===== */
+    background-attachment: fixed;
+
 }
