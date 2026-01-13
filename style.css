@@ -735,7 +735,7 @@ footer {
 }
 
 /* --- Affichage Tablette et Mobile (si écran < 992px) --- */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1190px) {
     
     .header-tablette {
         display: block;
