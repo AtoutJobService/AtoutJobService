@@ -798,3 +798,13 @@ footer {
         display: block;
     }
 }
+
+/* Fond de page identique pour les pages de formulaire */
+.form-page-bg {
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                url("images/Image Illustration Reims.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
