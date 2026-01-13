@@ -30,21 +30,24 @@
     </nav>
 </header>
 
-<form class="formulaire"
-      action="mailto:atoutjobservice.contact@neoma-bs.com"
-      method="post"
-      enctype="text/plain">
-      
-
-    <input type="text" name="NOM" placeholder="Nom" required>
-    <input type="text" name="Prénom" placeholder="Prénom" required>
-    <input type="email" name="E-mail" placeholder="Adresse E-mail" required>
-    <input type="tel" name="Téléphone" placeholder="Téléphone">
-
-    <textarea name="Compétences" placeholder="Compétences"></textarea>
-
-    <button type="submit" class="form-btn">Envoyer</button>
-</form>
+    <body class="form-page-bg">
+        <div class="container">
+            <h2>Devenir intérimaire</h2>
+            <div class="ajs-form-container">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="70671e22-7419-4b70-b78d-e9ad573f2f74">
+                
+                    <input type="text" name="NOM" placeholder="NOM" required>
+                    <input type="text" name="Prénom" placeholder="Prénom" required>
+                    <input type="email" name="E-mail" placeholder="Adresse E-mail" required>
+                    <input type="tel" name="Téléphone" placeholder="Téléphone">
+                    <textarea name="Compétences" placeholder="Parlez-nous de vos compétences (permis spécifique(s), domaine de prédilection...)" required></textarea>
+                
+                    <button type="submit" class="ajs-btn">Envoyer ma candidature</button>
+                </form>
+            </div>
+        </div>
+    </body>
 
 
 
