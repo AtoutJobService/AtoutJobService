@@ -85,40 +85,43 @@
 
 <div class="overlay">
     <div class="popup">
-        <label for="apply-toggle" class="close">✕</label>
+    <label for="apply-toggle" class="close">✕</label>
 
-        <p>
-            Si vous envoyez ce formulaire, vous assurez être disponible aux horaires indiqués.
-            Vous acceptez le traitement de vos données par AJS et d'être recontacté.
-        </p>
+    <p>
+        Si vous envoyez ce formulaire, vous assurez être disponible aux horaires indiqués.
+        Vous acceptez le traitement de vos données par AJS et d'être recontacté.
+    </p>
 
-<form action="mailto:atoutjobservice.contact@neoma-bs.com" method="post" enctype="text/plain">
+    <form action="https://api.web3forms.com/submit" method="POST">
+        
+        <input type="hidden" name="access_key" value="083a728c-1ecb-4500-b30d-4210f396bbd2">
+        
+        <input type="hidden" name="subject" value="Nouvelle candidature - Missions AJS">
+        
+        <input type="text" name="nom" placeholder="Nom" required>
+        <input type="text" name="prenom" placeholder="Prénom" required>
+        <input type="tel" name="telephone" placeholder="Téléphone">
+        <input type="email" name="email" placeholder="Adresse e-mail" required>
 
-    <input type="text" name="nom" placeholder="Nom" required>
-    <input type="text" name="prenom" placeholder="Prénom" required>
-    <input type="tel" name="telephone" placeholder="Téléphone">
-    <input type="email" name="email" placeholder="Adresse e-mail" required>
+        <textarea name="commentaires" placeholder="Commentaires"></textarea>
 
-    <textarea name="commentaires" placeholder="Commentaires"></textarea>
+        <div class="permis-block">
+            <span class="permis-label">Permis :</span>
 
-    <div class="permis-block">
-        <span class="permis-label">Permis :</span>
+            <label class="permis-option">
+                <input type="radio" name="permis" value="Oui">
+                Oui
+            </label>
 
-        <label class="permis-option">
-            <input type="radio" name="permis" value="Oui">
-            Oui
-        </label>
+            <label class="permis-option">
+                <input type="radio" name="permis" value="Non">
+                Non
+            </label>
+        </div>
 
-        <label class="permis-option">
-            <input type="radio" name="permis" value="Non">
-            Non
-        </label>
-    </div>
-
-    <button type="submit">Envoyer</button>
-</form>
-
-    </div>
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
 </div>
 
 
