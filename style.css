@@ -1,3 +1,6 @@
+/* =========================================
+   RESET & BASE
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +11,12 @@
 body {
     background: #e0e0e0;
     padding-top: 90px;
-    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
 }
 
-
-/* ===== HEADER FIXE ===== */
+/* =========================================
+   HEADER & NAVIGATION
+   ========================================= */
 header {
     position: fixed;
     top: 0;
@@ -23,44 +27,25 @@ header {
     justify-content: space-between;
     padding: 0 40px;
     z-index: 1000;
-
-    background: linear-gradient(
-        270deg,
-        #b30000,
-        #8b0000,
-        #5c0000,
-        #8b0000,
-        #b30000
-    );
+    background: linear-gradient(270deg, #b30000, #8b0000, #5c0000, #8b0000, #b30000);
     background-size: 600% 600%;
     animation: gradientMove 100s linear infinite;
 }
-
 
 .logo img {
     height: 100px;
     width: 105px;
 }
 
-
-/* ===== MENU ===== */
 nav a {
     margin-left: 12px;
     padding: 12px 22px;
     text-decoration: none;
     color: white;
     border-radius: 30px;
-
-    background: linear-gradient(
-        270deg,
-        #b30000,
-        #8b0000,
-        #5c0000,
-        #8b0000
-    );
+    background: linear-gradient(270deg, #b30000, #8b0000, #5c0000, #8b0000);
     background-size: 400% 400%;
     animation: gradientMove 240s linear infinite;
-
     transition: transform 0.1s ease, filter 0.5s ease;
 }
 
@@ -69,8 +54,9 @@ nav a:hover {
     filter: brightness(85%);
 }
 
-
-/* ===== CONTENU ===== */
+/* =========================================
+   LAYOUT GÉNÉRAL (Container, Titres, Box)
+   ========================================= */
 .container {
     text-align: center;
     padding: 60px 20px;
@@ -90,8 +76,9 @@ h1, h2, h3 {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-
-/* ===== FORMULAIRE ===== */
+/* =========================================
+   FORMULAIRES
+   ========================================= */
 .form-group {
     margin: 15px;
 }
@@ -107,62 +94,61 @@ textarea {
     height: 120px;
 }
 
-/* ===== FOOTER ===== */
-footer {
-    background: #5c0000;
-    color: #e0e0e0;
-    font-size: 12px;
-    text-align: center;
-    padding: 15px;
-}
-@keyframes gradientMove {
-    0% {
-        background-position: 200% 50%;
-    }
-    100% {
-        background-position: -200% 50%;
-    }
+/* Bouton pour proposer une mission */
+.btn-submit {
+    margin-top: 20px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(270deg, #b30000, #8b0000, #5c0000);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+.btn-submit:hover {
+    filter: brightness(90%);
 }
 
-.footer-content img {
-    height: 30px;
-    width: auto;
+/* Formulaire page Devenir Intérimaire */
+.formulaire {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0);
+    padding: 30px;
+    border-radius: 16px;
 }
 
-/* ===== IMAGES QUI SOMMES-NOUS ===== */
-
-.photos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin: auto;
+.formulaire input,
+.formulaire textarea {
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
-.photos img {
-    width: 175px;
-    object-fit: contain;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.form-btn {
+    background: #b00000;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-.photos img:hover {
-    transform: scale(1.05);
-    transition: 0.5s ease;
-
+.form-btn:hover {
+    background: #800000;
 }
 
-.team {
+/* =========================================
+   QUI SOMMES-NOUS (Équipe)
+   ========================================= */
+.team-row {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 40px;
+    margin: 40px 0;
     flex-wrap: wrap;
 }
 
@@ -196,14 +182,6 @@ footer {
     font-size: 18px;
 }
 
-.team-card span {
-    font-size: 14px;
-    color: #555;
-}
-
-
-/* ===== Liens Prénom Linkedin ===== */
-
 .team-card h4 a {
     color: #8b0000;
     text-decoration: none;
@@ -215,73 +193,20 @@ footer {
     text-decoration: underline;
 }
 
-/* ===== Logos FOOTER ===== */
-
-.social-logo {
-    height: 23px;
-    width: auto;
-    opacity: 0.7;
-    transition: transform 0.075s ease, opacity 0.2s ease;
+.team-card span {
+    font-size: 14px;
+    color: #555;
 }
 
-.social-logo:hover {
-    transform: scale(1.075);
-    opacity: 1;
-}
-
-
-/* ===== Liens FOOTER ===== */
-
-.footer-link {
-    color: #aaa;
-    text-decoration: none;
-}
-
-.footer-link:hover {
-    text-decoration: underline;
-    color: white;
-}
-
-
-/* ===== Bouton Envoyer formulaire - Proposer une mission ===== */
-
-
-.btn-submit {
-    margin-top: 20px;
-    padding: 14px 30px;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(270deg, #b30000, #8b0000, #5c0000);
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.btn-submit:hover {
-    filter: brightness(90%);
-}
-
-/* ===== Images et Mise en forme 'Qui sommmes-nous ?' ===== */
-
-.team-row {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 40px 0;
-    flex-wrap: wrap;
-}
-
-
-/* ===== Historique Missions AJS - Dans l'encadré blanc ===== */
-
-
+/* =========================================
+   HISTORIQUE DES MISSIONS (Style Carte)
+   ========================================= */
 .mission-card {
     background: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 16px;
-    margin: 30px 0;
-    margin-left: 21px;
-    margin-right: 21px;}
+    margin: 30px 21px;
+}
 
 .mission-header {
     display: flex;
@@ -292,7 +217,7 @@ footer {
 
 .mission-header h4 {
     color: rgb(0, 0, 0);
-    font-weight: 2000;
+    font-weight: 2000; /* Note: font-weight 2000 n'existe pas, max est 900 */
     font-size: 1.9rem;
     margin: 0 0 15px 100px;
 }
@@ -304,6 +229,13 @@ footer {
     margin-left: 5px;
 }
 
+.mission-subtitle {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 15px;
+}
 
 .mission-content {
     display: flex;
@@ -328,19 +260,9 @@ footer {
     flex: 1;
 }
 
-.mission-subtitle {
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: #000;
-    margin-bottom: 15px;
-}
-
-
-
-/* ===== Encadré Postuler 'Missions' ===== */
-
-
+/* =========================================
+   PAGE MISSIONS (Layout principal)
+   ========================================= */
 .mission-box {
     background: white;
     display: flex;
@@ -350,41 +272,90 @@ footer {
     color: black;
 }
 
-.mission-left { flex: 3; }
-.mission-right { flex: 1; display: flex; align-items: center; justify-content: center; }
-
 .mission-main {
     display: flex;
-    gap: 100px;
+    align-items: stretch;
+    gap: 20px;
 }
 
 .mission-main img {
-    width: 25%;
-    max-width: 15%;
-    height: 100%;
+    max-width: 300px;
+    width: auto;
+    height: auto;
+    align-self: stretch;
+    object-fit: contain;
     border-radius: 12px;
-    object-fit: cover;
 }
 
-.toggle-desc {
-    cursor: pointer;
+.mission-desc-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mission-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Section Infos et PDF en bas de la mission */
+.mission-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.mission-infos {
+    flex: 2;
+}
+
+.mission-infos p {
+    margin: 6px 0;
+}
+
+.mission-pdf {
+    flex: 1;
+    background: #f2f2f2;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: left; /* Corrigé de 'bottom' à 'left' ou 'center' */
+}
+
+.pdf-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
     color: #b00000;
-    font-size: 0.9rem;
+    font-weight: 600;
 }
 
-.mission-details {
-    display: none;
-    margin-top: 15px;
+.pdf-link:hover {
+    text-decoration: underline;
+}
+
+/* Section droite (Bouton Postuler) */
+.mission-right {
+    flex: 1;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
-#details-toggle:checked ~ .mission-details {
-    display: flex;
+/* =========================================
+   POP-UP POSTULER
+   ========================================= */
+.apply-btn {
+    background: #b00000;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
-
-/* ===== Pop-up Postuler à une mission ===== */
+.apply-btn:hover {
+    background: #800000;
+}
 
 .overlay {
     position: fixed;
@@ -415,23 +386,6 @@ footer {
     cursor: pointer;
 }
 
-.apply-btn {
-    background: #b00000;
-    color: white;
-    padding: 14px 30px;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-.apply-btn:hover {
-    background: #800000;
-}
-
-
-
-
-
-
 .permis-block {
     margin: 12px 0;
 }
@@ -450,105 +404,397 @@ footer {
     font-size: 0.95rem;
 }
 
-.mission-desc {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.mission-bottom {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 30px;
-}
-
-.mission-infos {
-    flex: 2;
-}
-
-.mission-infos p {
-    margin: 6px 0;
-}
-
-.mission-pdf {
-    flex: 1;
-    background: #f2f2f2;
-    padding: 15px;
-    border-radius: 12px;
-    text-align: bottom;
-}
-
-.pdf-link {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #b00000;
-    font-weight: 600;
-}
-
-.pdf-link:hover {
-    text-decoration: underline;
-}
-
-
-.mission-title {
-    text-align: justify;
-    color: #b00000; /* Rouge AJS */
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-
-
-/* ===== Formulaire pour devenir intérimaire ===== */
-
-
-.formulaire {
-    max-width: 500px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0);
-    padding: 30px;
-    border-radius: 16px;
-}
-
-.formulaire input,
-.formulaire textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-.form-btn {
-    background: #b00000;
-    color: white;
-    border: none;
-    padding: 14px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.form-btn:hover {
-    background: #800000;
-}
-
-/* ===== Page du fond "Devenir Intérimaire" ===== */
+/* =========================================
+   PAGES SPÉCIFIQUES (Backgrounds)
+   ========================================= */
 .interimaire-page {
-    background:
-        linear-gradient(
-            rgba(255,255,255,0.85),
-            rgba(255,255,255,0.85)
-        ),
-        url("images/Image\ Illustration\ Reims.jpg");
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                url("images/Image Illustration Reims.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
-/* ===== Défilement avec la page ou non ===== */
     background-attachment: fixed;
+}
 
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background: #5c0000;
+    color: #e0e0e0;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-content img {
+    height: 30px;
+    width: auto;
+}
+
+.social-logo {
+    height: 23px;
+    width: auto;
+    opacity: 0.7;
+    transition: transform 0.075s ease, opacity 0.2s ease;
+}
+
+.social-logo:hover {
+    transform: scale(1.075);
+    opacity: 1;
+}
+
+.footer-link {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+@keyframes gradientMove {
+    0% { background-position: 200% 50%; }
+    100% { background-position: -200% 50%; }
+}
+
+/* =========================================
+   RESPONSIVE (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Ajustements généraux */
+    body {
+        padding-top: 80px;
+    }
+
+    header {
+        height: 80px;
+        padding: 0 20px;
+        flex-direction: row;
+    }
+
+    .logo img {
+        height: 65px;
+        width: auto;
+    }
+
+    nav {
+        display: none; /* Attention: Le menu disparaît sur mobile */
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+
+    /* Ajustements Missions */
+    .mission-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-main img {
+        max-width: 90%;
+        height: auto;
+    }
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    /* ===== TYPOGRAPHIE ===== */
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    /* ===== BOX GÉNÉRALE ===== */
+    .box {
+        padding: 25px 18px;
+    }
+
+    /* ===== PAGE MISSIONS (Offres) ===== */
+    .mission-box {
+        flex-direction: column; /* Empile l'image et le texte */
+        gap: 20px;
+    }
+
+    .mission-main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mission-main img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Partie basse de l'offre (Infos + PDF) */
+    .mission-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mission-infos,
+    .mission-pdf {
+        width: 100%;
+    }
+
+    /* Bouton Postuler */
+    .mission-right {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* Pop-up formulaire */
+    .popup {
+        width: 90%;
+        max-width: 420px;
+    }
+
+    /* ===== PAGE HISTORIQUE ===== */
+    .mission-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mission-img {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 15px;
+    }
+
+    .mission-text {
+        text-align: center;
+    }
+
+    /* ===== PAGE QUI SOMMES-NOUS ===== */
+    .team-row {
+        gap: 20px;
+    }
+
+    .team-card {
+        width: 90%;
+        max-width: 280px; /* Évite que les cartes soient trop larges sur mobile */
+    }
+
+    /* ===== FORMULAIRES ===== */
+    input,
+    textarea {
+        width: 100%; /* Prend toute la largeur sur mobile */
+    }
+
+    .formulaire {
+        padding: 20px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer p {
+        font-size: 11px;
+        text-align: center;
+    }
+}
+}
+
+/* =========================================
+   MENU DÉROULANT (TABLETTE & MOBILE)
+   ========================================= */
+
+/* 1. On cache la case à cocher partout (elle sert juste de mécanique) */
+.menu-btn {
+    display: none;
+}
+
+/* 2. Style de l'icône "Hamburger" (3 barres blanches) */
+.menu-icon {
+    cursor: pointer;
+    display: none; /* Caché sur PC */
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 25px; /* Largeur de l'icône */
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.menu-icon .navicon:before { top: 7px; }
+.menu-icon .navicon:after { top: -7px; }
+
+
+/* =========================================
+   MEDIA QUERY (Mobile & Tablette < 768px)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* On affiche l'icône du menu en haut à droite */
+    .menu-icon {
+        display: block;
+    }
+
+    /* On transforme le menu horizontal en liste verticale cachée */
+    header nav {
+        display: block; /* Réactive le menu (il était display:none dans votre code précédent) */
+        position: absolute;
+        top: 100%; /* Juste en dessous du header */
+        left: 0;
+        right: 0;
+        background-color: #5c0000; /* Fond rouge foncé */
+        max-height: 0; /* Fermé par défaut */
+        overflow: hidden; /* Cache le contenu qui dépasse */
+        transition: max-height 0.3s ease-in-out; /* Animation douce */
+        width: 100%;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Style des liens dans le menu déroulant */
+    header nav a {
+        display: block; /* Les liens prennent toute la largeur */
+        padding: 15px 20px;
+        margin: 0; /* Enlève les marges latérales */
+        border-radius: 0; /* Enlève les bords ronds */
+        border-bottom: 1px solid rgba(255,255,255,0.1); /* Petit trait de séparation */
+        text-align: center;
+        background: none; /* Enlève le dégradé des boutons PC */
+        animation: none; /* Enlève l'animation des boutons PC */
+    }
+
+    header nav a:hover {
+        background-color: #8b0000; /* Changement de couleur au survol */
+        transform: none; /* Enlève l'effet de zoom */
+    }
+
+    /* === MAGIE DU CHECKBOX === */
+    /* Quand la case est cochée, on ouvre le menu */
+    .menu-btn:checked ~ nav {
+        max-height: 400px; /* Assez grand pour tout afficher */
+    }
+
+    /* Animation de l'icône hamburger en croix (X) */
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+    .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+}
+
+/* --- Masquer le système sur PC (si écran > 992px) --- */
+.header-tablette {
+    display: none;
+}
+
+/* --- Affichage Tablette et Mobile (si écran < 992px) --- */
+@media screen and (max-width: 992px) {
+    
+    .header-tablette {
+        display: block;
+        position: relative;
+        height: 60px; /* Hauteur de votre barre */
+        background-color: #fff;
+    }
+
+    /* 1. On cache la case à cocher (elle travaille dans l'ombre) */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* 2. Style du bouton (Label avec l'image) */
+    .menu-trigger {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1001; /* Pour rester au-dessus du menu */
+    }
+
+    .menu-trigger img {
+        width: 40px; /* Taille du logo */
+        height: auto;
+    }
+
+    /* 3. Le Menu (Caché par défaut) */
+    .menu-items {
+        display: none; /* Le secret est ici : caché de base */
+        position: absolute;
+        top: 60px; /* Juste sous le header */
+        right: 0;
+        width: 250px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    /* Style de la liste (esthétique) */
+    .menu-items ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu-items li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #eee;
+    }
+    .menu-items li a:hover {
+        background-color: #f4f4f4;
+    }
+
+    /* 4. LA MAGIE CSS */
+    /* "Si l'input est coché, l'élément voisin (.menu-items) s'affiche" */
+    #menu-toggle:checked ~ .menu-items {
+        display: block;
+    }
 }
