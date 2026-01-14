@@ -861,3 +861,17 @@ footer {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.rgpd-consent {
+    margin: 15px 0;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+    color: #555;
+}
+.rgpd-consent input {
+    width: auto; /* Empêche la case de prendre 100% de largeur */
+    margin-top: 3px;
+}
