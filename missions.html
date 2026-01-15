@@ -6,12 +6,13 @@
     <title>Missions</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+
+<body>
 <header>
     <div class="logo">
         <a href="missions.html">
-            <img src="images/logo AJS.png" alt="Logo AJS">
+            <img src="images/logo ajs.png" alt="Logo AJS">
         </a>
     </div>
 
@@ -36,53 +37,40 @@
 
     <p>Nous proposons des missions pour les étudiants de NEOMA Business School</p>
 
-    <div class="box">
 <div class="mission-box">
-
-    <!-- COLONNE GAUCHE : CONTENU -->
-<div class="mission-main">
-    <img src="images/Logo ICParis.png" alt="Mission">
-
-    <div class="mission-desc-block">
-        <h4>Description de la mission</h4>
-        <p class="mission-desc">
-            Lorem ipsum
-        </p>
+    <div class="mission-left">
+        <img src="images/Logo ICParis.png" alt="Mission" class="mission-main-img">
     </div>
-</div>
 
-
-        <!-- INFOS + PIECE JOINTE -->
-        <div class="mission-bottom">
-            
-            <!-- LISTE INFOS -->
-            <div class="mission-infos">
-                <p><span class="Marge">Salaire brut : </span><strong>Non renseigné</strong></p>
-                <p><span class="Marge">Localisation : </span><strong>Reims</strong></p>
-                <p><span class="Marge">Permis A requis : </span> <strong>Non</strong></p>
-                <p><span class="Marge">Durée : </span><strong>40h/mois</strong></p>
-                <p><span class="Marge">Compétences requises : </span><strong>/</strong></p>
-            </div>
-
-
-            <!-- PIECE JOINTE PDF -->
-            <div class="mission-pdf">
-                <p><strong>Fiche mission (PDF)</strong></p>
-                <a href="PDF Missions/Offre agent polyvalent d'accueil_Campus_Reims_Auto-entrepreneur.pdf" target="_blank" class="pdf-link">
-                    📄 Télécharger l’offre
-                </a>
-            </div>
-
+    <div class="mission-center">
+        <h3>Titre de la Mission</h3>
+        <div class="description-wrapper">
+            <input type="checkbox" id="expanded-1" class="read-more-check">
+            <p class="mission-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  nostrud exercitation Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation exercitation  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... (Texte long de plus de 500 caractères)
+            </p>
+            <label for="expanded-1" class="read-more-btn">Voir plus</label>
+            <label for="expanded-1" class="read-more-btn close">Voir moins</label>
         </div>
-
     </div>
 
-    <!-- COLONNE DROITE : POSTULER -->
-<input type="checkbox" id="apply-toggle" hidden>
+    <div class="mission-right-infos">
+        <div class="info-item"><strong>Salaire brut : </strong>Non renseigné</div>
+        <div class="info-item"><strong>Localisation : </strong>...Reims</div>
+        <div class="info-item"><strong>Permis A requis : </strong>Non </div>
+        <div class="info-item"><strong>Durée : </strong>40h/semaine</div>
+        <div class="info-item"><strong>Compétences : </strong>/</div>
+    </div>
 
-<div class="mission-right">
-    <label for="apply-toggle" class="apply-btn">Postuler</label>
+    <div class="mission-attachment">
+        <div class="pdf-box">
+            <span>Fiche PDF</span>
+            <a href="PDF Missions/Offre agent polyvalent d'accueil_Campus_Reims_Auto-entrepreneur.pdf" target="_blank" class="pdf-link">Télécharger</a>
+        </div>
+        <label for="apply-toggle" class="apply-btn">Postuler</label>
+    </div>
 </div>
+
 
 <div class="overlay">
     <div class="popup">
@@ -99,43 +87,34 @@
         
         <input type="hidden" name="subject" value="Nouvelle candidature - Missions AJS">
         
-        <input type="text" name="NOM" placeholder="NOM" required>
-        <input type="text" name="Prénom" placeholder="Prénom" required>
-        <input type="tel" name="Téléphone" placeholder="Téléphone">
-        <input type="email" name="E-mail" placeholder="Adresse e-mail" required>
+        <input type="text" name="nom" placeholder="Nom" required>
+        <input type="text" name="prenom" placeholder="Prénom" required>
+        <input type="tel" name="telephone" placeholder="Téléphone">
+        <input type="email" name="email" placeholder="Adresse e-mail" required>
 
-        <textarea name="Commentaires" placeholder="Commentaires"></textarea>
+        <textarea name="commentaires" placeholder="Commentaires"></textarea>
 
         <div class="permis-block">
             <span class="permis-label">Permis :</span>
 
             <label class="permis-option">
-                <input type="radio" name="Permis" value="Oui">
+                <input type="radio" name="permis" value="Oui">
                 Oui
             </label>
 
             <label class="permis-option">
-                <input type="radio" name="Permis" value="Non">
+                <input type="radio" name="permis" value="Non">
                 Non
             </label>
-                <div class="rgpd-consent">
-            <input type="checkbox" id="consent" name="consent" required>
-            <label for="consent">J'accepte que mes données soient traitées par AJS pour la gestion de ma demande.</label>
-                </div>
         </div>
-
-        <button type="submit">Envoyer</button>
     </form>
 </div>
 </div>
 
 
-</div>
 
 
     </div>
-</div>
-
 
 
 
@@ -149,7 +128,7 @@
             <img src="images/Instagram_icon.png" alt="Instagram AJS" class="social-logo">
         </a>
 
-        <a href="https://www.linkedin.com/" target="_blank">
+        <a href="https://www.linkedin.com/company/atout-job-service-jb/" target="_blank">
             <img src="images/LinkedIn_logo_initiales.png" alt="LinkedIn AJS" class="social-logo">
         </a>
         <a href=""></a>
