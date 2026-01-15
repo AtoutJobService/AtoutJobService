@@ -12,7 +12,7 @@
 <header>
     <div class="logo">
         <a href="missions.html">
-            <img src="images/logo AJS.png" alt="Logo AJS">
+            <img src="images/logo ajs.png" alt="Logo AJS">
         </a>
     </div>
 
@@ -33,11 +33,12 @@
 </header>
 
 <div class="container">
+
+    
     <h2>Missions</h2>
 
     <p>Nous proposons des missions pour les étudiants de NEOMA Business School</p>
     <br>
-
 <div class="mission-box">
     <div class="mission-left">
         <img src="images/Logo ICParis.png" alt="Mission" class="mission-main-img">
@@ -64,55 +65,73 @@
         <div class="info-item">Compétences : <strong>/</strong></div>
     </div>
 
-    <div class="mission-attachment">
-        <div class="pdf-box">
-            <span>Fiche PDF</span>
-            <a href="PDF Missions/Offre agent polyvalent d'accueil_Campus_Reims_Auto-entrepreneur.pdf" target="_blank" class="pdf-link">Télécharger</a>
+<div class="mission-attachment">
+    <div class="pdf-box">
+        <span>Fiche PDF</span>
+        <a href="PDF Missions/Offre agent polyvalent d'accueil_Campus_Reims_Auto-entrepreneur.pdf" target="_blank" class="pdf-link">Télécharger la fiche information</a>
+    </div>
+
+    <label for="apply-toggle" class="apply-btn-full">Postuler</label>
+</div>
+</div>
+
+
+
+
+
+    <!-- COLONNE DROITE : POSTULER -->
+<input type="checkbox" id="apply-toggle" hidden>
+
+
+<input type="checkbox" id="apply-toggle" style="display: none;">
+
+<div class="overlay">
+    <div class="popup-modern">
+        <label for="apply-toggle" class="close-btn">&times;</label>
+        
+        <div class="popup-header">
+            <h2>Postuler à cette mission</h2>
+            <p>Remplissez le formulaire ci-dessous pour soumettre votre candidature à AJS.</p>
         </div>
-        <label for="apply-toggle" class="apply-btn">Postuler</label>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="popup-form">
+            <input type="hidden" name="access_key" value="083a728c-1ecb-4500-b30d-4210f396bbd2">
+            <input type="hidden" name="subject" value="Nouvelle candidature Mission">
+
+            <div class="form-row">
+                <input type="text" name="nom" placeholder="Nom" required>
+                <input type="text" name="prenom" placeholder="Prénom" required>
+            </div>
+
+            <input type="email" name="email" placeholder="Adresse e-mail" required>
+            <input type="tel" name="telephone" placeholder="Téléphone">
+
+            <div class="permis-container">
+                <span class="label-text">Avez-vous le permis requis ?</span>
+                <div class="radio-group">
+                    <label><input type="radio" name="permis" value="Oui" required> Oui</label>
+                    <label><input type="radio" name="permis" value="Non"> Non</label>
+                </div>
+            </div>
+
+            <textarea name="message" placeholder="Un mot pour nous convaincre ? (facultatif)"></textarea>
+
+            <div class="rgpd-check">
+                <input type="checkbox" id="rgpd" required>
+                <label for="rgpd">J'accepte que AJS traite mes données pour cette mission.</label>
+            </div>
+
+            <button type="submit" class="submit-popup">Envoyer ma candidature</button>
+        </form>
     </div>
 </div>
 
 
-<div class="overlay">
-    <div class="popup">
-    <label for="apply-toggle" class="close">✕</label>
 
-    <p>
-        Si vous envoyez ce formulaire, vous assurez être disponible aux horaires indiqués.
-        Vous acceptez le traitement de vos données par AJS et d'être recontacté.
-    </p>
 
-    <form action="https://api.web3forms.com/submit" method="POST">
-        
-        <input type="hidden" name="access_key" value="083a728c-1ecb-4500-b30d-4210f396bbd2">
-        
-        <input type="hidden" name="subject" value="Nouvelle candidature - Missions AJS">
-        
-        <input type="text" name="nom" placeholder="Nom" required>
-        <input type="text" name="prenom" placeholder="Prénom" required>
-        <input type="tel" name="telephone" placeholder="Téléphone">
-        <input type="email" name="email" placeholder="Adresse e-mail" required>
-
-        <textarea name="commentaires" placeholder="Commentaires"></textarea>
-
-        <div class="permis-block">
-            <span class="permis-label">Permis :</span>
-
-            <label class="permis-option">
-                <input type="radio" name="permis" value="Oui">
-                Oui
-            </label>
-
-            <label class="permis-option">
-                <input type="radio" name="permis" value="Non">
-                Non
-            </label>
-        </div>
-    </form>
+    </div>
 </div>
-</div>
-</div>
+
 
 
 
@@ -132,7 +151,7 @@
         <a href=""></a>
         <p>© 2026 AJS Neoma • Contacts • Plan du site • 
             <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
-
+            • Dernière Mise à Jour : 15/01/2025
         </p>
     </div>
 </footer>
