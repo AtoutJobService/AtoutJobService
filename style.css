@@ -319,7 +319,7 @@ textarea {
     background: #f2f2f2;
     padding: 15px;
     border-radius: 12px;
-    text-align: left; /* Corrigé de 'bottom' à 'left' ou 'center' */
+    text-align: center; /* Corrigé de 'bottom' à 'left' ou 'center' */
 }
 
 .pdf-link {
@@ -874,4 +874,42 @@ footer {
 .rgpd-consent input {
     width: auto; /* Empêche la case de prendre 100% de largeur */
     margin-top: 3px;
+}
+
+
+/* ===== INFORMATIONS DIVERSES ===== */
+
+.infos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.info-card h3 {
+    color: #8b0000;
+    margin-bottom: 15px;
+}
+
+.video-placeholder {
+    background: #e0e0e0;
+    height: 220px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-weight: 600;
+}
+
+.infos-grid {
+    grid-template-columns: 1fr;
 }
