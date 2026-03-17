@@ -86,7 +86,55 @@
 </div>
 </div>
 
+<input type="checkbox" id="apply-toggle" hidden>
 
+
+<input type="checkbox" id="apply-toggle" style="display: none;">
+
+<div class="overlay">
+    <div class="popup-modern">
+        <label for="apply-toggle" class="close-btn">&times;</label>
+        
+        <div class="popup-header">
+            <h2>Postuler à cette mission</h2>
+            <p>Remplissez le formulaire ci-dessous pour soumettre votre candidature à AJS.</p>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="popup-form">
+            <input type="hidden" name="access_key" value="083a728c-1ecb-4500-b30d-4210f396bbd2">
+            <input type="hidden" name="subject" value="Nouvelle candidature Mission">
+
+            <div class="form-row">
+                <input type="text" name="nom" placeholder="Nom" required>
+                <input type="text" name="prenom" placeholder="Prénom" required>
+            </div>
+            
+            <div>
+            <input type="text" name="mission" placeholder="Numéro de la mission">
+            <input type="email" name="email" placeholder="Adresse e-mail" required>
+            <input type="tel" name="telephone" placeholder="Téléphone">
+            </div>
+
+            <div class="permis-container">
+                <span class="label-text">Avez-vous le permis requis ?</span>
+                <div class="radio-group">
+                    <label><input type="radio" name="permis" value="Oui" required> Oui</label>
+                    <label><input type="radio" name="permis" value="Non"> Non</label>
+                </div>
+            </div>
+
+            <textarea name="message" placeholder="Un mot pour nous convaincre ? (facultatif)"></textarea>
+
+            <div class="rgpd-check">
+                <input type="checkbox" id="rgpd" required>
+                <label for="rgpd">J'accepte que AJS traite mes données pour cette mission.</label>
+
+            </div>
+
+            <button type="submit" class="submit-popup">Envoyer ma candidature</button>
+        </form>
+    </div>
+</div>
 
 
 
